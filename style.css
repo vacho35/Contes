@@ -57,7 +57,7 @@ h1{
   visibility: visible;
 }
 .arrow-holder-visible{
-  visibility: visible;
+  visibility: hidden;
 }
 .arrow-holder::before{
   content: "";
