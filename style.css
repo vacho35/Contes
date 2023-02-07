@@ -54,7 +54,7 @@ h1{
 }
 .arrow-holder{
   position: relative;
-  visibility: hidden;
+  visibility: visible;
 }
 .arrow-holder-visible{
   visibility: visible;
