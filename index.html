@@ -9,45 +9,90 @@
   <title>Contes</title>
 </head>
 <body>
-  <div class="book">
-    <div class="edge-left edge"></div>
-    <div class="edge-right edge"></div>
-    <div class="page-left-fixed"><p>page 1 gauche</p></div>
-    <div id="pages" class="pages">
-      <div class="page right"><p>page 2 droite <br><br>S'il vous plait!</p></div>
-      <div class="page left"><p>page 3 gauche</p></div>
-      <div class="page right"><p>page 4 droite</p></div>
-      <div class="page left"><p>page 5 gauche</p></div>
-      <div class="page right"><img src="/Images/chris2sissi_mont_saint_michel_watercolor_miniature_landscape_ul_032133df-2d06-4337-8a2e-00b4f3d66ce6.png" alt=""></div>
-      <div class="page left"></div>
-      <div class="page right"></div>
-      <div class="page left"></div>
-      <div class="page right"></div>
-      <div class="page left"></div>
-      <div class="page"></div>
-      <div class="page"></div>
-      <div class="page"></div>
-      <div class="page"></div>
-      <div class="page"></div>
-      <div class="page"></div>
-      <div class="page"></div>
-      <div class="page"></div>
-      <div class="page"></div>
-      <div class="page"></div>
-      <div class="page"></div>
-      <div class="page"></div>
-      <div class="page"></div>
-      <div class="page"></div>
-      <div class="page"></div>
-      <div class="page"></div>
-      <div class="page"></div>
-      <div class="page"></div>
-      <div class="page"></div>
-      <div class="page"></div>
-      <div class="page"></div>
-      <div class="page"></div>
+
+  <!-- //************     Section1       ***********// -->
+  <section id="main-section">
+    <h1>Titre Principal</h1>
+    <div class="container-video">
+      <video src="/Images/videoAcceuil.mp4" class="video" ></video>
+      <div class="controls">
+        <div class="barre-orange">
+          <div class="juice"></div>
+        </div>        
+        <div class="buttons">
+          <button id="play-pause">
+            <img src="Ressources/play-button.svg" alt="bouton lecture">
+          </button>
+          <button id="mute">Mute</button>
+          <input type="range" id="volume-slider" min="0" max="100" value="50" step="1">
+          <button id=""fullscreen>
+            <img src="" alt="">
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
+    
+
+      <!-- //*********    Button  *********  // -->
+    <div class="container">
+      <div class="arrow-holder" id="arrow-holder">
+        <div id="arrow" class="circle bounce" data-target="#introText">
+            <i class="fa fa-angle-double-down fa-4x drop-arrow" id="faa"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- //*********        section2     ********// -->
+  <section id="section2">
+    <div class="book">
+      <div class="edge-left edge"></div>
+      <div class="edge-right edge"></div>
+      <div class="page-left-fixed"><img src="/Images/saintmichredim.png" alt="couché des oleil sur mont Saint Michel"></div>
+      <div id="pages" class="pages">
+        <div class="page right"><p>Veuillez tourner la page en cliquant dessus</p>
+        <img src="/Images/fleche-page.png " alt="fleche indiquant qu'il faut tourner la page"></div>
+        <div class="page left"><p>Le bucheron & la fée nature</p></div>
+        <div class="page right"><img src="/Images/bucheron et la fee.png" alt="Une bucheron et une fée dans une forêt"></div>
+        <div class="page left"><p>Le taureau bleu</p></div>
+        <div class="page right"><img src="/Images/fille-sur-taureau-bleu.png" alt="Une fille sur un taureau bleu"></div>
+        <div class="page left"><p>Le taureau bleu</p></div>
+        <div class="page right"><img src="/Images/fille-sur-taureau.png" alt="Une fille sur un taureau bleu"></div>
+        <div class="page left"><p>L'archange Saint-Michel, le lutin, 
+          le diablotin & le dragon Prosper</p></div>
+        <div class="page right"><img src="/Images/ange-saintmich.png" alt="Le mont Saint michel et un ange"></div>
+        <div class="page left"><p>L'archange Saint-Michel, le lutin, 
+          le diablotin & le dragon Prosper (Suite)</p></div>
+        <div class="page right"><img src="/Images/dragon--garcon-saintmichel-redim.png" alt="Le mont saint michel et un garcon"></div>
+        <div class="page left"><p>Trotte-Menue & son fiancé Soupir</p></div>
+        <div class="page right"><img src="/Images/souris-danse.png" alt="Une souris danse"></div>
+        <div class="page left"><p>Trotte-Menue & son fiancé Soupir (Suite)</p></div>
+        <div class="page right"><img src="/Images/souris-princesse.png" alt="Une sourie en princesse"></div>
+        <div class="page left"><p>Oeil de Lune & Perce-Neige</p></div>
+        <div class="page right"><img src="/Images/sioux-lumiere.png" alt="deux petits sioux"></div>
+        <div class="page left"><p>Oeil de Lune & Perce-Neige (Suite)</p></div>
+        <div class="page right"><img src="/Images/sioux-lumiere2.png" alt="deux petits sioux"></div>
+        <div class="page left"><p>Le talisman de Merlin</p></div>
+        <div class="page right"><img src="/Images/femme-petit-chien-grotte.png" alt="une femme et un chien dans une grotte"></div>
+        <div class="page left"><p>Le talisman de Merlin (Suite)</p></div>
+        <div class="page right"><img src="/Images/femme-petit-chien-grotte2.png" alt="une femme et un chien dans une grotte""></div> 
+        <div class="page left"><p>Le talisman de Merlin (Suite)</p></div>
+        <div class="page right"><img src="/Images/trois-dragons-mignons.png" alt="trois dragons mignons"></div> 
+        <div class="page left"><p>Mr le chasseur et les licornes</div>
+        <div class="page right"><img src="/Images/chasseur licorne.png" alt="Un chasseur et une licorne dans une forêt"></div> 
+        <div class="page left"><p>Anne de Bretagne et petit-Louis</p></div>
+        <div class="page right"><img src="/Images/reine-sabot.png" alt="Une reine avc des sabots"></div>
+        <div class="page left"><p>Bibi Coco & Chanee</p></div>
+        <div class="page right"><img src="/Images/singe-dos-elephant-personnages-dessins-animes-mignons-mascotte-singe-drole-souriant-portrait-personnages-jeu-livre-creatures-jungle-sauvage-mammifere-isolees-fond-blanc-illustration-vectorielle_107791-8750.webp" alt="une elephant et un singe"></div>
+        <div class="page left"><p>Les miettes de pain magiques</p></div>
+        <div class="page right"><img src="/Images/fille-sur-oiseaux.png" alt="petite fille sur oiseaux bleu"></div>
+        <div class="page left"><p>Les pious-pious</p></div>
+        <div class="page right"><img src="/Images/oiseaux-amoureux.png" alt="deux oiseaux mignons amoureux"></div>     
+      </div>
+    </div>
+  </section>
+  
   <script src="/index.js"></script>
+  <script src="https://kit.fontawesome.com/0cfccd0bcd.js" crossorigin="anonymous"></script>
 </body>
 </html>
