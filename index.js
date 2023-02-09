@@ -1,14 +1,3 @@
-// ************************        Arrow Button        ***************
-
-// $("#arrow").click(function() {
-//   doBounce($(this), 3, '10px', 300);   
-// });
-// function doBounce(element, times, distance, speed) {
-//   for(var i = 0; i < times; i++) {
-//       element.animate({marginTop: '-='+distance}, speed)
-//           .animate({marginTop: '+='+distance}, speed);
-//   }        
-// }
 
 // ***************************        Book             **********************
 
@@ -43,8 +32,16 @@ document.addEventListener('DOMContentLoaded', function(){
       }
 })
 
-
+// bouton apparition
 
 setTimeout(() => {
   document.getElementById('arrow-holder').classList.add('arrow-holder-visible')
-}, 50000);
+}, 5000);
+
+
+// Scroll du bouton
+function smoothScroll(){
+var element = document.getElementById("section2");
+element.scrollIntoView();
+element.style.transitionTimingFunction = "ease-in";
+} 
