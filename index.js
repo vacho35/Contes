@@ -46,4 +46,12 @@ document.addEventListener('DOMContentLoaded', function(){
 
 setTimeout(() => {
   document.getElementById('arrow-holder').classList.add('arrow-holder-visible')
-}, 50000);
+}, 5000);
+
+
+// Scroll du bouton
+function smoothScroll(){
+var element = document.getElementById("section2");
+element.scrollIntoView();
+element.style.transitionTimingFunction = "ease-in";
+} 
