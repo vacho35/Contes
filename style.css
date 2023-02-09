@@ -14,6 +14,7 @@ html, body {
 }
 html {
   height: 100%;
+  scroll-behavior: smooth;
 }
 body {
   line-height: 1.5em;
@@ -123,10 +124,11 @@ h1{
 }
 .arrow-holder{
   position: relative;
-  visibility: visible;
+  visibility: hidden;
+  cursor: pointer;
 }
 .arrow-holder-visible{
-  visibility: hidden;
+  visibility: visible;
 }
 .arrow-holder::before{
   content: "";
