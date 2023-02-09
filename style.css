@@ -15,6 +15,7 @@ html, body {
 html {
   height: 100%;
   scroll-behavior: smooth;
+  --res: calc(0.01 * 10vmin);
 }
 body {
   line-height: 1.5em;
@@ -36,7 +37,7 @@ body {
 }
 h1{
   text-align: center;
-  font-size: 7em;
+  font-size: calc(130 * var(--res));
   margin-top: 100px;
   color: #f0f0f0;
 }
@@ -104,11 +105,8 @@ h1{
 }
 
 /* ****************************     Arrow Button         ************************** */
-
-.container {
-  margin: 60px auto; 
-  width:90px;
-  height:90px;
+.container-button{
+  margin-top: 2em;
 }
 .circle {
   background: #414141; 
@@ -129,18 +127,20 @@ h1{
 }
 .arrow-holder-visible{
   visibility: visible;
+  padding: 45px;
 }
-.arrow-holder::before{
+.arrow-holder::before {
   content: "";
-    width: 60px;
-    height: 9px;
-    position: absolute;
-    top: 82px;
-    bottom: 0;
-    left: 0px;
-    right: 0px;
-    background-color: #00000026;
-    border-radius: 77%;
+  width: 60px;
+  height: 9px;
+  position: absolute;
+  top: 127px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  right: 0px;
+  background-color: #fffcef7a;
+  border-radius: 77%;
 }
 .introText {
   background: #f26522;  
@@ -221,12 +221,12 @@ h1{
   perspective: 250vw;
 }
 p{
-  margin-bottom: 200px;
+  margin-bottom: 150px;
   text-align: center;
-  font-size: 4em;
+  font-size: 3em;
   color: #000000;
   padding: 41px;
-  line-height: 80px;
+  line-height: 1.3em;
   letter-spacing: 1.5px;
 }
 .page {
@@ -356,13 +356,29 @@ p{
   width: 100%;
   padding: 1.6em;
 }
-.right:nth-child(1) img{
-  width: 100px;
+.right:nth-child(1) img{  /***********  fleche livre *********/
+  position: absolute;
+  right: 0;
+  width: 120px;
+  top: 45%
 }
-.right:nth-child(1) p{
-  margin-left: 128px;
-  padding: 0;
+
+
+@media screen and (max-width: 1200px) {
+  p{
+    margin: 0;
+    padding: 1.5em;
+    text-align: center;
+    font-size: calc(8px + 2.3vw);    
+    line-height: calc(15px + 2vw);
+    letter-spacing: 1.5px;
+  }
+  .right:nth-child(1) img{
+    width: calc(45px + 4vw);
+  }
 }
+
+
 .page-left-fixed img{
   width: 75%;
   height: auto;
