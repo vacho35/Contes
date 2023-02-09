@@ -45,13 +45,61 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 setTimeout(() => {
-  document.getElementById('arrow-holder').classList.add('arrow-holder-visible')
-}, 5000);
+  document.getElementById('arrow-holder').classList.add('arrow-holder-visible');
+  document.getElementById('typedtext').classList.add('h1-visible');
+  typewriter()
+ }, 2000);
 
 
 // Scroll du bouton
-function smoothScroll(){
-var element = document.getElementById("section2");
-element.scrollIntoView();
-element.style.transitionTimingFunction = "ease-in";
+function smoothScroll1(){
+var section2 = document.getElementById("section2");
+section2.scrollIntoView();
+section2.style.transitionTimingFunction = "ease-in";
 } 
+
+function smoothScroll2(){
+  var section3 = document.getElementById("section3");
+  section3.scrollIntoView();
+  section3.style.transitionTimingFunction = "ease-in";
+  } 
+
+
+//////////////////////        Ecriture      //////////////////////////
+
+  // set up text to print, each item in array is new line
+var aText = new Array(
+  "Titre Principal"
+  );
+  var iSpeed = 80; // time delay of print out
+  var iIndex = 0; // start printing array at this posision
+  var iArrLength = aText[0].length; // the length of the text array
+  var iScrollAt = 20; // start scrolling up at this many lines
+   
+  var iTextPos = 0; // initialise text position
+  var sContents = ''; // initialise contents variable
+  var iRow; // initialise current row
+   
+  function typewriter()
+  {
+   sContents =  ' ';
+   iRow = Math.max(0, iIndex-iScrollAt);
+   var destination = document.getElementById("typedtext");
+   
+   while ( iRow < iIndex ) {
+    sContents += aText[iRow++] + '<br />';
+   }
+   destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+   if ( iTextPos++ == iArrLength ) {
+    iTextPos = 0;
+    iIndex++;
+    if ( iIndex != aText.length ) {
+     iArrLength = aText[iIndex].length;
+     setTimeout("typewriter()", 500);
+    }
+   } else {
+    setTimeout("typewriter()", iSpeed);
+   }
+  }
+  
+  
