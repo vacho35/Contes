@@ -48,8 +48,11 @@ setTimeout(() => {
   document.getElementById('arrow-holder').classList.add('arrow-holder-visible');
   document.getElementById('typedtext').classList.add('h1-visible');
   typewriter()
- }, 2000);
+ }, 4000);
 
+ setTimeout(() => {
+  document.getElementById("container-video").classList.add("container-video-visible")
+ }, 2000);
 
 // Scroll du bouton
 function smoothScroll1(){
@@ -69,7 +72,7 @@ function smoothScroll2(){
 
   // set up text to print, each item in array is new line
 var aText = new Array(
-  "Titre Principal"
+  "Nancy Kelsal"
   );
   var iSpeed = 80; // time delay of print out
   var iIndex = 0; // start printing array at this posision

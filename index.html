@@ -13,9 +13,15 @@
   <!-- //************     Section1       ***********// -->
   <section id="main-section">
     <h1 id="typedtext" class="typedtext"></h1>
-    <div class="container-video">
-      <video src="/Images/videoAcceuil.mp4" class="video" ></video>
-      <div class="controls">
+    <div class="background-container">
+      <img class="lune" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt="lune">
+      <div class="stars"></div>
+      <div class="twinkling"></div>
+      <div class="clouds"></div>
+    </div>
+    <div class="container-video" id="container-video">
+      <video src="/Ressources/Images/videoAccueil.mp4" class="video" autoplay type="video/mp4"></video>
+      <!-- <div class="controls">
         <div class="barre-orange">
           <div class="juice"></div>
         </div>        
@@ -29,7 +35,7 @@
             <img src="" alt="">
           </button>
         </div>
-      </div>
+      </div> -->
     </div>
     
 
@@ -48,47 +54,51 @@
     <div class="book">
       <div class="edge-left edge"></div>
       <div class="edge-right edge"></div>
-      <div class="page-left-fixed"><img src="/Images/saintmichredim.png" alt="couché des oleil sur mont Saint Michel"></div>
+      <div class="page-left-fixed"><img src="/Ressources/Images/saintmichredim.png" alt="couché des oleil sur mont Saint Michel"></div>
       <div id="pages" class="pages">
         <div class="page right"><p>Veuillez tourner la page en cliquant dessus</p>
-        <img src="/Images/fleche-page.png " alt="fleche indiquant qu'il faut tourner la page"></div>
+        <img src="/Ressources/Images/fleche-page.png " alt="fleche indiquant qu'il faut tourner la page"></div>
         <div class="page left"><p>Le bucheron & la fée nature</p></div>
-        <div class="page right"><img src="/Images/bucheron et la fee.png" alt="Une bucheron et une fée dans une forêt"></div>
+        <div class="page right"><img src="/Ressources/Images/bucheron et la fee.png" alt="Une bucheron et une fée dans une forêt"></div>
         <div class="page left"><p>Le taureau bleu</p></div>
-        <div class="page right"><img src="/Images/fille-sur-taureau-bleu.png" alt="Une fille sur un taureau bleu"></div>
+        <div class="page right"><img src="/Ressources/Images/fille-sur-taureau-bleu.png" alt="Une fille sur un taureau bleu"></div>
         <div class="page left"><p>Le taureau bleu (Suite)</p></div>
-        <div class="page right"><img src="/Images/fille-sur-taureau.png" alt="Une fille sur un taureau bleu"></div>
+        <div class="page right"><img src="/Ressources/Images/fille-sur-taureau.png" alt="Une fille sur un taureau bleu"></div>
         <div class="page left"><p>L'archange Saint-Michel, le lutin, 
           le diablotin & le dragon Prosper</p></div>
-        <div class="page right"><img src="/Images/ange-saintmich.png" alt="Le mont Saint michel et un ange"></div>
+        <div class="page right"><img src="/Ressources/Images/saintmich_badass.png" alt="Le mont Saint michel et un ange"></div>
         <div class="page left"><p>L'archange Saint-Michel, le lutin, 
           le diablotin & le dragon Prosper (Suite)</p></div>
-        <div class="page right"><img src="/Images/dragon--garcon-saintmichel-redim.png" alt="Le mont saint michel et un garcon"></div>
+        <div class="page right"><img src="/Ressources/Images/dragon--garcon-saintmichel-redim.png" alt="Le mont saint michel et un garcon"></div>
         <div class="page left"><p>Trotte-Menue & son fiancé Soupir</p></div>
-        <div class="page right"><img src="/Images/souris-danse.png" alt="Une souris danse"></div>
+        <div class="page right"><img src="/Ressources/Images/souris-danse.png" alt="Une souris danse"></div>
         <div class="page left"><p>Trotte-Menue & son fiancé Soupir (Suite)</p></div>
-        <div class="page right"><img src="/Images/souris-princesse.png" alt="Une sourie en princesse"></div>
+        <div class="page right"><img src="/Ressources/Images/souris-princesse.png" alt="Une sourie en princesse"></div>
         <div class="page left"><p>Oeil de Lune & Perce-Neige</p></div>
-        <div class="page right"><img src="/Images/sioux-lumiere.png" alt="deux petits sioux"></div>
+        <div class="page right"><img src="/Ressources/Images/sioux-lumiere.png" alt="deux petits sioux"></div>
         <div class="page left"><p>Oeil de Lune & Perce-Neige (Suite)</p></div>
-        <div class="page right"><img src="/Images/sioux-lumiere2.png" alt="deux petits sioux"></div>
+        <div class="page right"><img src="/Ressources/Images/sioux-lumiere2.png" alt="deux petits sioux"></div>
         <div class="page left"><p>Le talisman de Merlin</p></div>
-        <div class="page right"><img src="/Images/femme-petit-chien-grotte.png" alt="une femme et un chien dans une grotte"></div>
+        <div class="page right"><img src="/Ressources/Images/femme-petit-chien-grotte.png" alt="une femme et un chien dans une grotte"></div>
         <div class="page left"><p>Le talisman de Merlin (Suite)</p></div>
-        <div class="page right"><img src="/Images/femme-petit-chien-grotte2.png" alt="une femme et un chien dans une grotte""></div> 
+        <div class="page right"><img src="/Ressources/Images/femme-petit-chien-grotte2.png" alt="une femme et un chien dans une grotte""></div> 
         <div class="page left"><p>Le talisman de Merlin (Suite)</p></div>
-        <div class="page right"><img src="/Images/trois-dragons-mignons.png" alt="trois dragons mignons"></div> 
+        <div class="page right"><img src="/Ressources/Images/trois-dragons-mignons.png" alt="trois dragons mignons"></div> 
         <div class="page left"><p>Mr le chasseur et les licornes</div>
-        <div class="page right"><img src="/Images/chasseur licorne.png" alt="Un chasseur et une licorne dans une forêt"></div> 
+        <div class="page right"><img src="/Ressources/Images/chasseur licorne.png" alt="Un chasseur et une licorne dans une forêt"></div> 
         <div class="page left"><p>Anne de Bretagne et petit-Louis</p></div>
-        <div class="page right"><img src="/Images/reine-sabot.png" alt="Une reine avc des sabots"></div>
+        <div class="page right"><img src="/Ressources/Images/reine-sabot.png" alt="Une reine avc des sabots"></div>
         <div class="page left"><p>Bibi Coco & Chanee</p></div>
-        <div class="page right"><img src="/Images/singe-dos-elephant-personnages-dessins-animes-mignons-mascotte-singe-drole-souriant-portrait-personnages-jeu-livre-creatures-jungle-sauvage-mammifere-isolees-fond-blanc-illustration-vectorielle_107791-8750.webp" alt="une elephant et un singe"></div>
+        <div class="page right"><img src="/Ressources/Images/garconandelephant.png" alt="une elephant et un singe"></div>
+        <div class="page left"><p>Bibi Coco & Chanee</p></div>
+        <div class="page right"><img src="/Ressources/Images/gibbon_enchained.png" alt="une elephant et un singe"></div>
         <div class="page left"><p>Les miettes de pain magiques</p></div>
-        <div class="page right"><img src="/Images/fille-sur-oiseaux.png" alt="petite fille sur oiseaux bleu"></div>
+        <div class="page right"><img src="/Ressources/Images/fille-sur-oiseaux.png" alt="petite fille sur oiseaux bleu"></div>
         <div class="page left"><p>Les pious-pious</p></div>
-        <div class="page right"><img src="/Images/oiseaux-amoureux.png" alt="deux oiseaux mignons amoureux"></div> 
-        <div class="page left"><p>Fin ... <br>Pour aller plus loin cliquez juste en dessous pour découvrir mon livre</p>
+        <div class="page right"><img src="/Ressources/Images/oiseaux-amoureux.png" alt="deux oiseaux mignons amoureux"></div> 
+        <div class="page left"><p>Milou et l'arbre coupé du théatre</p></div>
+        <div class="page right"><img src="/Ressources/Images/" alt="deux oiseaux mignons amoureux"></div>
+        <div class="page left"><p><span>Fin...</span><br><br>Pour aller plus loin cliquez juste en dessous pour découvrir mon livre</p>
           <div class="container-button" id="book-button">
             <div onclick="smoothScroll2()">
               <div class="circle bounce" data-target="#introText2">
@@ -98,10 +108,10 @@
           </div>
         </div>        
       </div>
-      <div class="page-right-fixed"><img src="/Images/The_AI_Artist_an_ancient_monolithic_portal_guarded_by_the_anthr_d40ea068-49da-439f-b698-a2677d7c329c.png" alt="couché des oleil sur mont Saint Michel"></div>
+      <div class="page-right-fixed"><img src="/Ressources/Images/livre_bonzai.png" alt="couché des oleil sur mont Saint Michel"></div>
   </section>
   <section id="section3">
-    <img src="/Images/book3d.jpg" alt="livre en 3D">
+    <img src="/Ressources/Images/book3d.jpg" alt="livre en 3D">
   </section>
   <section id="section4">
     <form action="">
