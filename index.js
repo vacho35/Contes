@@ -1,16 +1,5 @@
-// ************************        Arrow Button        ***************
 
-// $("#arrow").click(function() {
-//   doBounce($(this), 3, '10px', 300);   
-// });
-// function doBounce(element, times, distance, speed) {
-//   for(var i = 0; i < times; i++) {
-//       element.animate({marginTop: '-='+distance}, speed)
-//           .animate({marginTop: '+='+distance}, speed);
-//   }        
-// }
-
-// ***************************        Book             **********************
+// ***************************        Book             **********************  //
 
 var pages = document.getElementsByClassName('page');
 for(var i = 0; i < pages.length; i++)
@@ -44,6 +33,8 @@ document.addEventListener('DOMContentLoaded', function(){
 })
 
 
+// ***************************    Tiemout    ***************************  //
+
 setTimeout(() => {
   document.getElementById('arrow-holder').classList.add('arrow-holder-visible');
   document.getElementById('typedtext').classList.add('h1-visible');
@@ -54,7 +45,9 @@ setTimeout(() => {
   document.getElementById("container-video").classList.add("container-video-visible")
  }, 2000);
 
-// Scroll du bouton
+
+// ***************************    Scroll Bouton    ***************************  //
+
 function smoothScroll1(){
 var section2 = document.getElementById("section2");
 section2.scrollIntoView();
@@ -68,7 +61,8 @@ function smoothScroll2(){
   } 
 
 
-//////////////////////        Ecriture      //////////////////////////
+
+// ***************************    Ecriture titre    ***************************  //
 
   // set up text to print, each item in array is new line
 var aText = new Array(
