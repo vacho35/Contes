@@ -4,18 +4,31 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css?family=Lovers+Quarrel" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lovers+Quarrel&family=Raleway:ital,wght@0,400;1,300;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
-  <title>Contes</title>
+  <title>Nancy KelsaLL</title>
 </head>
 <body>
 
+
   <!-- //************     Section1       ***********// -->
+
   <section id="main-section">
-    <h1>Titre Principal</h1>
-    <div class="container-video">
-      <video src="/Images/videoAcceuil.mp4" class="video" ></video>
-      <div class="controls">
+    <h1 id="typedtext" class="typedtext"></h1>
+    <div class="background-container">
+      <div class="background-image">
+        <img class="arriere-plan" src="/Ressources/Images/main_arriere_plan.png" alt="arriere plan mont saint michel">
+        <img class="premier-plan" src="/Ressources/Images/mont_premier_plan.png" alt="premier plan le mont saint michel">
+      </div>      
+      <img class="lune" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt="lune">
+      <div class="stars"></div>
+      <div class="clouds"></div>
+    </div>
+    <div class="container-video" id="container-video">
+      <video src="../Videos/videoAccueil.mp4" class="video" autoplay type="video/mp4"></video>
+      <!-- <div class="controls">
         <div class="barre-orange">
           <div class="juice"></div>
         </div>        
@@ -29,13 +42,14 @@
             <img src="" alt="">
           </button>
         </div>
-      </div>
+      </div> -->
     </div>
     
 
       <!-- //*********    Button  *********  // -->
+
     <div class="container-button">
-      <div class="arrow-holder" id="arrow-holder" onclick="smoothScroll()">
+      <div class="arrow-holder" id="arrow-holder" onclick="smoothScroll1()">
         <div id="arrow" class="circle bounce" data-target="#introText">
             <i class="fa fa-angle-double-down fa-4x drop-arrow" id="faa"></i>
         </div>
@@ -43,55 +57,107 @@
     </div>
   </section>
 
+
   <!-- //*********        section2     ********// -->
+
   <section id="section2">
     <div class="book">
       <div class="edge-left edge"></div>
       <div class="edge-right edge"></div>
-      <div class="page-left-fixed"><img src="/Images/saintmichredim.png" alt="couché des oleil sur mont Saint Michel"></div>
+      <div class="page-left-fixed"><img src="/Ressources/Images/saintmichredim.png" alt="couché des oleil sur mont Saint Michel"></div>
       <div id="pages" class="pages">
         <div class="page right"><p>Veuillez tourner la page en cliquant dessus</p>
-        <img src="/Images/fleche-page.png " alt="fleche indiquant qu'il faut tourner la page"></div>
+        <img src="/Ressources/Images/fleche-page.png " alt="fleche indiquant qu'il faut tourner la page"></div>
         <div class="page left"><p>Le bucheron & la fée nature</p></div>
-        <div class="page right"><img src="/Images/bucheron et la fee.png" alt="Une bucheron et une fée dans une forêt"></div>
+        <div class="page right"><img src="/Ressources/Images/bucheron et la fee.png" alt="Une bucheron et une fée dans une forêt"></div>
         <div class="page left"><p>Le taureau bleu</p></div>
-        <div class="page right"><img src="/Images/fille-sur-taureau-bleu.png" alt="Une fille sur un taureau bleu"></div>
-        <div class="page left"><p>Le taureau bleu</p></div>
-        <div class="page right"><img src="/Images/fille-sur-taureau.png" alt="Une fille sur un taureau bleu"></div>
+        <div class="page right"><img src="/Ressources/Images/fille-sur-taureau-bleu.png" alt="Une fille sur un taureau bleu"></div>
+        <div class="page left"><p>Le taureau bleu (Suite)</p></div>
+        <div class="page right"><img src="/Ressources/Images/fille-sur-taureau.png" alt="Une fille sur un taureau bleu"></div>
         <div class="page left"><p>L'archange Saint-Michel, le lutin, 
           le diablotin & le dragon Prosper</p></div>
-        <div class="page right"><img src="/Images/ange-saintmich.png" alt="Le mont Saint michel et un ange"></div>
+        <div class="page right"><img src="/Ressources/Images/saintmich_badass.png" alt="Le mont Saint michel et un ange"></div>
         <div class="page left"><p>L'archange Saint-Michel, le lutin, 
           le diablotin & le dragon Prosper (Suite)</p></div>
-        <div class="page right"><img src="/Images/dragon--garcon-saintmichel-redim.png" alt="Le mont saint michel et un garcon"></div>
+        <div class="page right"><img src="/Ressources/Images/dragon--garcon-saintmichel-redim.png" alt="Le mont saint michel et un garcon"></div>
         <div class="page left"><p>Trotte-Menue & son fiancé Soupir</p></div>
-        <div class="page right"><img src="/Images/souris-danse.png" alt="Une souris danse"></div>
+        <div class="page right"><img src="/Ressources/Images/souris-danse.png" alt="Une souris danse"></div>
         <div class="page left"><p>Trotte-Menue & son fiancé Soupir (Suite)</p></div>
-        <div class="page right"><img src="/Images/souris-princesse.png" alt="Une sourie en princesse"></div>
+        <div class="page right"><img src="/Ressources/Images/souris-princesse.png" alt="Une sourie en princesse"></div>
         <div class="page left"><p>Oeil de Lune & Perce-Neige</p></div>
-        <div class="page right"><img src="/Images/sioux-lumiere.png" alt="deux petits sioux"></div>
+        <div class="page right"><img src="/Ressources/Images/sioux-lumiere.png" alt="deux petits sioux"></div>
         <div class="page left"><p>Oeil de Lune & Perce-Neige (Suite)</p></div>
-        <div class="page right"><img src="/Images/sioux-lumiere2.png" alt="deux petits sioux"></div>
+        <div class="page right"><img src="/Ressources/Images/sioux-lumiere2.png" alt="deux petits sioux"></div>
         <div class="page left"><p>Le talisman de Merlin</p></div>
-        <div class="page right"><img src="/Images/femme-petit-chien-grotte.png" alt="une femme et un chien dans une grotte"></div>
+        <div class="page right"><img src="/Ressources/Images/femme-petit-chien-grotte.png" alt="une femme et un chien dans une grotte"></div>
         <div class="page left"><p>Le talisman de Merlin (Suite)</p></div>
-        <div class="page right"><img src="/Images/femme-petit-chien-grotte2.png" alt="une femme et un chien dans une grotte""></div> 
+        <div class="page right"><img src="/Ressources/Images/femme-petit-chien-grotte2.png" alt="une femme et un chien dans une grotte""></div> 
         <div class="page left"><p>Le talisman de Merlin (Suite)</p></div>
-        <div class="page right"><img src="/Images/trois-dragons-mignons.png" alt="trois dragons mignons"></div> 
+        <div class="page right"><img src="/Ressources/Images/trois-dragons-mignons.png" alt="trois dragons mignons"></div> 
         <div class="page left"><p>Mr le chasseur et les licornes</div>
-        <div class="page right"><img src="/Images/chasseur licorne.png" alt="Un chasseur et une licorne dans une forêt"></div> 
+        <div class="page right"><img src="/Ressources/Images/chasseur licorne.png" alt="Un chasseur et une licorne dans une forêt"></div> 
         <div class="page left"><p>Anne de Bretagne et petit-Louis</p></div>
-        <div class="page right"><img src="/Images/reine-sabot.png" alt="Une reine avc des sabots"></div>
+        <div class="page right"><img src="/Ressources/Images/reine-sabot.png" alt="Une reine avc des sabots"></div>
         <div class="page left"><p>Bibi Coco & Chanee</p></div>
-        <div class="page right"><img src="/Images/singe-dos-elephant-personnages-dessins-animes-mignons-mascotte-singe-drole-souriant-portrait-personnages-jeu-livre-creatures-jungle-sauvage-mammifere-isolees-fond-blanc-illustration-vectorielle_107791-8750.webp" alt="une elephant et un singe"></div>
+        <div class="page right"><img src="/Ressources/Images/garconandelephant.png" alt="une elephant et un singe"></div>
+        <div class="page left"><p>Bibi Coco & Chanee</p></div>
+        <div class="page right"><img src="/Ressources/Images/gibbon_enchained.png" alt="une elephant et un singe"></div>
         <div class="page left"><p>Les miettes de pain magiques</p></div>
-        <div class="page right"><img src="/Images/fille-sur-oiseaux.png" alt="petite fille sur oiseaux bleu"></div>
+        <div class="page right"><img src="/Ressources/Images/fille-sur-oiseaux.png" alt="petite fille sur oiseaux bleu"></div>
         <div class="page left"><p>Les pious-pious</p></div>
-        <div class="page right"><img src="/Images/oiseaux-amoureux.png" alt="deux oiseaux mignons amoureux"></div>     
+        <div class="page right"><img src="/Ressources/Images/oiseaux-amoureux.png" alt="deux oiseaux mignons amoureux"></div> 
+        <div class="page left"><p>Milou et l'arbre coupé du théatre</p></div>
+        <div class="page right"><img src="/Ressources/Images/" alt="deux oiseaux mignons amoureux"></div>
+        <div class="page left"><p><span>Fin...</span><br><br>Pour aller plus loin cliquez juste en dessous pour découvrir mon livre</p>
+          <div class="container-button" id="book-button">
+            <div onclick="smoothScroll2()">
+              <div class="circle bounce" data-target="#introText2">
+                  <i class="fa fa-angle-double-down fa-4x drop-arrow" id="faa"></i>
+              </div>
+            </div>   
+          </div>
+        </div>        
       </div>
-    </div>
+      <div class="page-right-fixed"><img src="/Ressources/Images/livre_bonzai.png" alt="couché des oleil sur mont Saint Michel"></div>
   </section>
-  
+
+
+  <!-- //*************************        Section4 Formulaire     **********************// -->
+
+  <section id="section3">
+    <img src="/Ressources/Images/dieuver3234.png" alt="livre en 3D">
+  </section>
+
+
+  <!-- //*************************        Section4 Formulaire     **********************// -->
+
+  <section id="section4">
+    <form>
+      <div class="form-container">
+        <h4>Me contacter</h4>
+          <input type="text" id="name" placeholder="Votre nom" required><br>
+          <input type="email" id="mail" placeholder="Votre email" required><br>
+          <input type="number" id="number" placeholder="Votre numero (facultatif)"><br>
+          <textarea name="message" id="message" cols="20" rows="8" placeholder="Votre message"></textarea>
+          <button id="send-button">Envoyer</button>
+      <div class="contact">
+          <a href="mailto:annickroux513@gmail.com">✉️ annickroux513@gmail.com</a>
+          <a href="tel:+33">📞 0299335544</a>
+      </div>
+      </div>
+    </form>
+  </section>
+
+
+  <!-- //*************************        Footer     **********************// -->
+
+  <footer>
+    <img src="/Ressources/Images/IA.png" alt="image représantant une IA">
+    <div class="copyright">
+      <p>© Copyright <a href="http://">Nancy KELSALL</a> Tout droits reservés</p>
+      <p>Site créé par <a href="mailto:quetinpoker1006@gmail.com">Borderline</a> en grande partie à l'aide des intelligences artificielles "Chat GPT, Midjourney, D-ID"</p>   
+    </div> 
+  </footer>
   <script src="/index.js"></script>
   <script src="https://kit.fontawesome.com/0cfccd0bcd.js" crossorigin="anonymous"></script>
 </body>

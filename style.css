@@ -18,12 +18,12 @@ html {
   --res: calc(0.01 * 10vmin);
 }
 body {
-  line-height: 1.5em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: #00000026;
+  color: #f0f0f0;
+}
+a{
+  text-decoration: none;
+  color: #8a91f6;
 }
 
 /***************************          Main Section         ***********************/
@@ -34,25 +34,141 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.background-image{
+  position: relative;
+}
+.arriere-plan {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+}
+.premier-plan{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 4;
 }
 h1{
   text-align: center;
   font-size: calc(130 * var(--res));
-  margin-top: 100px;
-  color: #f0f0f0;
+  margin-top: 34px;
+  color: #d2d2d2;  
+  letter-spacing: 0.05em;
+  font-weight: 300;
+  z-index: 10;
+}
+.typedtext{
+  visibility: hidden;
+}
+.h1-visible {
+  visibility: visible;
+}
+.background-container{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  
+}
+.background-container .lune {
+  width: 200px;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  z-index: 5;
 }
 
+/*************************      Animation Main Background  *********************/
+
+@keyframes move-background {
+  from {
+		-webkit-transform: translate3d(0px, 0px, 0px);
+	}
+	to { 
+		-webkit-transform: translate3d(1000px, 0px, 0px);
+	}
+}
+@-webkit-keyframes move-background {
+  from {
+		-webkit-transform: translate3d(0px, 0px, 0px);
+	}
+	to { 
+		-webkit-transform: translate3d(1000px, 0px, 0px);
+	}
+}
+
+@-moz-keyframes move-background {    
+	from {
+		-webkit-transform: translate3d(0px, 0px, 0px);
+	}
+	to { 
+		-webkit-transform: translate3d(1000px, 0px, 0px);
+	}
+}
+
+    @-webkit-keyframes move-background {
+	from {
+		-webkit-transform: translate3d(0px, 0px, 0px);
+	}
+	to { 
+		-webkit-transform: translate3d(1000px, 0px, 0px);
+	}
+}
+
+
+.stars {
+ background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+ position: absolute;
+	top: 0;
+	bottom: 22%;
+	left: 0;
+	right: 0;
+	display: block;
+  	z-index: 3;
+}
+
+.clouds{
+	width:10000px;
+	height: 100%;
+	background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 6;
+
+   -moz-animation:move-background 150s linear infinite;
+  -ms-animation:move-background 150s linear infinite;
+  -o-animation:move-background 150s linear infinite;
+  -webkit-animation:move-background 150s linear infinite;
+  animation:move-background 150s linear infinite;
+}
+
+
+/*************************      Vidéo  *********************/
+
 .container-video{
+  width: 100%;
+  height: 45vh;
   max-width: 63vw;
   position: relative;
   overflow: hidden;
   min-height: 45vh;
+  z-index: 20;
 }
+/* .container-video-visible{
+  display: block;
+} */
 .video {
   width: 100%;
   height: 45vh;
+  z-index: 20;
 }
-.controls {
+/* .controls {
   display: flex;
   position: absolute;
   bottom: 0;
@@ -102,11 +218,13 @@ h1{
 }
 #fullscreen img {
   width: 20px;
-}
+} */
 
 /* ****************************     Arrow Button         ************************** */
+
 .container-button{
   margin-top: 2em;
+  z-index: 10;
 }
 .circle {
   background: #414141; 
@@ -115,7 +233,7 @@ h1{
   text-align: center; 
   padding: 17px 0 0 0; 
   line-height: 50px; 
-  color: #fff;
+  color: #f0f0f0;
 }
 #faa {
   font-size: 2em;
@@ -129,7 +247,7 @@ h1{
   visibility: visible;
   padding: 45px;
 }
-.arrow-holder::before {
+.arrow-holder::before{
   content: "";
   width: 60px;
   height: 9px;
@@ -139,7 +257,7 @@ h1{
   left: 50%;
   transform: translateX(-50%);
   right: 0px;
-  background-color: #fffcef7a;
+  background-color: #fffcef0f;
   border-radius: 77%;
 }
 .introText {
@@ -150,7 +268,8 @@ h1{
   line-height: 1.5em!important;
 }
 
-/*-------------Infinite Bouncing Arrow----------*/
+
+/*************************      Infinite Bouncing Arrow  *********************/
 
 .bounce {
   -moz-animation: bounce 2s infinite;
@@ -207,7 +326,9 @@ h1{
   }
 }
 
+
 /**************************          Section2          **************************/
+
 #section2{
   height: 100vh;
   width: 100%;
@@ -229,6 +350,9 @@ p{
   line-height: 1.3em;
   letter-spacing: 1.5px;
 }
+p span{
+  font-size: 2em;
+}
 .page {
   width: var(--width-page);
   height: var(--height-page);
@@ -248,7 +372,6 @@ p{
   transform-style: preserve-3d;
   backface-visibility: hidden;
   border-radius: 4px;
-  /*box-shadow: 0 0 0 1px #e3dfd8;*/
 }
 .book .page {
   float: none;
@@ -297,7 +420,6 @@ p{
 .book .page:nth-child(odd):hover {
   transform: rotateY(-7deg);
   filter: none;
-  /* transition: ease-in-out; */
 }
 .book .page:nth-child(odd):hover:before {
   background: rgba(0, 0, 0, 0.03);
@@ -360,7 +482,9 @@ p{
   position: absolute;
   right: 0;
   width: 120px;
-  top: 45%
+  top: 45%;
+  transform: rotateZ(180deg);
+  transform: rotateX(180deg);
 }
 
 
@@ -382,11 +506,18 @@ p{
 .page-left-fixed img{
   width: 75%;
   height: auto;
-  position: t;
   border-top-left-radius: 10px 3px;
   border-bottom-left-radius: 10px 3px;
   border-top-right-radius: 1000px 20px;
   border-bottom-right-radius: 1000px 20px;
+}
+.page-right-fixed img{
+  width: 100%;
+  height: auto;
+  border-top-right-radius: 10px 3px;
+  border-bottom-right-radius: 10px 3px;
+  border-top-left-radius: 1000px 20px;
+  border-bottom-left-radius: 1000px 20px;
 }
 .edge {
   position:absolute;
@@ -411,7 +542,6 @@ p{
   max-width: 2vw;
   height: var(--height-page);
   transform-origin: 100% 50%;
-  /* transform: rotateY(-60deg); */
 }
 
 .edge-right {
@@ -420,7 +550,6 @@ p{
   height: var(--height-page);
   max-width: 2vw;
   transform-origin: 0 50%;
-  /* transform: rotateY(50deg); */
 }
 .page-left-fixed{
   margin: 0;
@@ -438,4 +567,147 @@ p{
   justify-content: center;
   align-items: center;
   padding: 30px;
+}
+.page-right-fixed{
+  margin: 0;
+  position: absolute;
+  top: 0;
+  width: var(--width-page);
+  height: var(--height-page);
+  right: 0;
+  border-top-right-radius: 10px 3px;
+  border-bottom-right-radius: 10px 3px;
+  border-top-left-radius: 1000px 20px;
+  border-bottom-left-radius: 1000px 20px;
+  background: linear-gradient(to right, #FFFCEF 0%,#FFFCEF 95%,#9e9d8b 98%,#383826 100%);
+  border-right: solid 1px #383826;
+  background: linear-gradient(to left, #FFFCEF 0%,#FFFCEF 95%, #9e9d8b 98%,#383826 100%);  
+  border-left: solid 1px #383826;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  z-index: -10;
+}
+#book-button{
+  position: absolute;
+  bottom: 48px;
+  z-index: 20;  
+}
+#book-button::before{
+  content: "";
+  width: 60px;
+  height: 9px;
+  position: absolute;
+  top: 80px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  right: 0px;
+  background-color: #3937302f;
+  border-radius: 77%;
+}
+
+
+/*************************      Section3 Presentation du livre  *********************/
+
+#section3 {
+  height: 100vh;
+}
+
+
+/*************************      Section4 Formulaire    *********************/
+
+#section4 {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100');
+  background-position: center;
+}
+.form-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(13px) saturate(156%);
+    -webkit-backdrop-filter: blur(13px) saturate(156%);
+    background-color: rgba(17, 25, 40, 0.43);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+h4{
+  font-size: 4em;
+  padding: 0;
+  margin: 40px;
+  font-family: raleway, sans-serif;
+}
+input{
+  border-radius: 10px;
+  width: 400px;
+  height: 50px;
+  padding: 10px;
+}
+textarea{
+  width: 400px;
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+#send-button{
+  background-color: #ef6013;
+  color: #f0f0f0;
+  width: 150px;
+  padding: 10px 0;
+  border-radius: 5px;
+}
+.contact{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: raleway;
+  margin: 20px;
+  padding: 0;
+}
+.contact a{
+  display: flex;
+  color: #9fe0f8;
+  padding: 10px;
+}
+
+
+
+
+/*************************      Footer      *********************/
+
+footer {
+width: 100%;
+height: auto;
+display: flex;
+text-align: center;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+background-color: #110b2f;
+border-top: #8a91f6;
+}
+footer img{
+  width: 100px;
+  margin: 40px 0 10px 0;
+  padding: 0;
+}
+footer p{
+  margin: 0px;
+  padding: 5px;
+  font-size: 0.7em;
+  line-height: 1.3em;
+  letter-spacing: 1.5px;
+  color: #f0f0f0;
+  font-family: 'raleway', cursive;
+}
+.copyright{
+  margin: 20px;
 }
