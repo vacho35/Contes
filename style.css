@@ -54,7 +54,7 @@ a{
 h1{
   text-align: center;
   font-size: calc(130 * var(--res));
-  margin-top: 34px;
+  margin-top: 10px;
   color: #d2d2d2;  
   letter-spacing: 0.05em;
   font-weight: 300;
@@ -62,6 +62,7 @@ h1{
 }
 .typedtext{
   visibility: hidden;
+  margin: 10px;
 }
 .h1-visible {
   visibility: visible;
@@ -158,15 +159,25 @@ h1{
   position: relative;
   overflow: hidden;
   min-height: 45vh;
+  z-index: 20;  
+  visibility: hidden;
+}
+.container-video-visible{
+  visibility: visible;  
   z-index: 20;
 }
-/* .container-video-visible{
-  display: block;
-} */
 .video {
   width: 100%;
   height: 45vh;
   z-index: 20;
+  
+}
+#play-pause {
+  width: auto;
+  z-index: 1000;
+}
+#play-pause img{
+  width: 30px;
 }
 /* .controls {
   display: flex;
@@ -625,7 +636,7 @@ p span{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100');
+  background-image: url('/Ressources/Images/oiseaux-amoureux.png');
   background-position: center;
 }
 .form-container{
@@ -633,7 +644,8 @@ p span{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(13px) saturate(156%);
+  background-image: url('/Ressources/Images/paysagefutur.png');
+  backdrop-filter: blur(8px) saturate(200%);
     -webkit-backdrop-filter: blur(13px) saturate(156%);
     background-color: rgba(17, 25, 40, 0.43);
     border-radius: 12px;

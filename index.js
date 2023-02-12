@@ -33,17 +33,36 @@ document.addEventListener('DOMContentLoaded', function(){
 })
 
 
-// ***************************    Tiemout    ***************************  //
+// ***************************    Timeout    ***************************  //
 
-setTimeout(() => {
-  document.getElementById('arrow-holder').classList.add('arrow-holder-visible');
-  document.getElementById('typedtext').classList.add('h1-visible');
-  typewriter()
- }, 4000);
+// const playButton = document.getElementById("play-pause");
+// playButton.addEventListener('click', () => {
+//   setTimeout(() => {
+//     document.getElementById('arrow-holder').classList.add('arrow-holder-visible');
+//     document.getElementById('typedtext').classList.add('h1-visible');
+//     document.getElementById("container-video").classList.add("container-video-visible");
+//     typewriter()
+//    }, 5000);
+  
+//   setTimeout(() => {
+//     document.querySelector('video').play();
+//    }, 6000);
+// })
 
- setTimeout(() => {
-  document.getElementById("container-video").classList.add("container-video-visible")
- }, 2000);
+const playButton = document.getElementById("play-pause");
+playButton.addEventListener('click', () => {
+  setTimeout(() => {
+    document.getElementById("container-video").classList.add("container-video-visible");
+    document.querySelector('video').play();
+   }, 2000);
+  setTimeout(() => {    
+    document.getElementById('typedtext').classList.add('h1-visible');
+    typewriter()
+   }, 4500);
+   setTimeout(() => {    
+    document.getElementById('arrow-holder').classList.add('arrow-holder-visible');
+   }, 100000);   
+})
 
 
 // ***************************    Scroll Bouton    ***************************  //
@@ -66,7 +85,7 @@ function smoothScroll2(){
 
   // set up text to print, each item in array is new line
 var aText = new Array(
-  "Nancy Kelsal"
+  "Nancy Kelsall"
   );
   var iSpeed = 80; // time delay of print out
   var iIndex = 0; // start printing array at this posision
