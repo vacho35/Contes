@@ -51,9 +51,11 @@ document.addEventListener('DOMContentLoaded', function(){
 
 const playButton = document.getElementById("play-pause");
 playButton.addEventListener('click', () => {
+    playButton.classList.add("launcher-hidden");
   setTimeout(() => {
     document.getElementById("container-video").classList.add("container-video-visible");
     document.querySelector('video').play();
+    playButton.classList.add("launcher-hidden");
    }, 2000);
   setTimeout(() => {    
     document.getElementById('typedtext').classList.add('h1-visible');
