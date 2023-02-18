@@ -1,4 +1,35 @@
 
+/////////////   Envoi Mail  /////////
+
+
+function sendMail() {
+  var params = {
+    firstname: document.getElementById("firstname").value,
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    number: document.getElementById("number").value,
+    message: document.getElementById("message").value,
+  };
+
+  const serviceID = "service_lbf7e5p";
+  const templateID = "template_d5a240a";
+
+    emailjs.send(serviceID, templateID, params)
+    .then(res=>{
+        document.getElementById("firstname").value = "";
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("number").value = "";
+        document.getElementById("message").value = "";
+        console.log(res);
+        alert("Votre message a bien été envoyé !!")
+
+    })
+    .catch(err=>console.log(err));
+
+}
+
+
 // ***************************        Book             **********************  //
 
 var pages = document.getElementsByClassName('page');
@@ -35,25 +66,14 @@ document.addEventListener('DOMContentLoaded', function(){
 
 // ***************************    Timeout    ***************************  //
 
-// const playButton = document.getElementById("play-pause");
-// playButton.addEventListener('click', () => {
-//   setTimeout(() => {
-//     document.getElementById('arrow-holder').classList.add('arrow-holder-visible');
-//     document.getElementById('typedtext').classList.add('h1-visible');
-//     document.getElementById("container-video").classList.add("container-video-visible");
-//     typewriter()
-//    }, 5000);
-  
-//   setTimeout(() => {
-//     document.querySelector('video').play();
-//    }, 6000);
-// })
 
 const playButton = document.getElementById("play-pause");
 playButton.addEventListener('click', () => {
+    playButton.classList.add("launcher-hidden");
   setTimeout(() => {
     document.getElementById("container-video").classList.add("container-video-visible");
     document.querySelector('video').play();
+    playButton.classList.add("launcher-hidden");
    }, 2000);
   setTimeout(() => {    
     document.getElementById('typedtext').classList.add('h1-visible');
@@ -61,7 +81,7 @@ playButton.addEventListener('click', () => {
    }, 4500);
    setTimeout(() => {    
     document.getElementById('arrow-holder').classList.add('arrow-holder-visible');
-   }, 100000);   
+   }, 1000);   
 })
 
 
