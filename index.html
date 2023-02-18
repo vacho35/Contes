@@ -7,7 +7,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lovers+Quarrel&family=Raleway:ital,wght@0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Scope+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
+  <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("oLLbv9-z-xYDdIXNM");
+      })();
+    </script>
   <title>Nancy KelsaLL</title>
 </head>
 <body>
@@ -15,46 +25,34 @@
 
   <!-- //************     Section1       ***********// -->
 
-  <section id="main-section">
-    <h1 id="typedtext" class="typedtext"></h1>
-    <button id="play-pause">
-      <img src="Ressources/play-button.svg" alt="bouton lecture">
-    </button>
+  <section id="main-section">    
     <div class="background-container">
-      <div class="background-image">
-        <img class="arriere-plan" src="/Ressources/Images/main_arriere_plan.png" alt="arriere plan mont saint michel">
-        <img class="premier-plan" src="/Ressources/Images/mont_premier_plan.png" alt="premier plan le mont saint michel">
-      </div>      
+      <h1 id="typedtext" class="typedtext"></h1>
+      <div class="launcher" id="play-pause">
+          <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            CLIQUEZ ICI !!
+          </a>
+      </div>
+      <div class="arriere-plan mont"></div>
+      <div class="premier-plan mont"></div>   
       <img class="lune" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt="lune">
       <div class="stars"></div>
       <div class="clouds"></div>
-    </div>
-    
+    </div>    
     <div class="container-video" id="container-video" >      
       <video src="/Ressources/Images/videoAccueil.mp4" class="video" id="video" autoplay type="video/mp4" ></video>
-      <!-- <div class="controls">
-        <div class="barre-orange">
-          <div class="juice"></div>
-        </div>        
-        <div class="buttons">
-          <button id="play-pause">
-            <img src="Ressources/play-button.svg" alt="bouton lecture">
-          </button>
-          <button id="mute">Mute</button>
-          <input type="range" id="volume-slider" min="0" max="100" value="50" step="1">
-          <button id=""fullscreen>
-            <img src="" alt="">
-          </button>
-        </div>
-      </div> -->
     </div>
     
 
-      <!-- //*********    Button  *********  // -->
+      <!-- //*********    Button fleché  *********  // -->
 
     <div class="container-button">
       <div class="arrow-holder" id="arrow-holder" onclick="smoothScroll1()">
-        <div id="arrow" class="circle bounce" data-target="#introText">
+        <div id="arrow" class="circle bounce">
             <i class="fa fa-angle-double-down fa-4x drop-arrow" id="faa"></i>
         </div>
       </div>
@@ -68,9 +66,9 @@
     <div class="book">
       <div class="edge-left edge"></div>
       <div class="edge-right edge"></div>
-      <div class="page-left-fixed"><img src="/Ressources/Images/saintmichredim.png" alt="couché des oleil sur mont Saint Michel"></div>
+      <div class="page-left-fixed"><img src="/Ressources/Images/saintmichredim.png" alt=""></div>
       <div id="pages" class="pages">
-        <div class="page right"><p>Veuillez tourner la page en cliquant dessus</p>
+        <div class="page right"><p>Pour tourner la page veuillez cliquer dessus, et survolez les images pour que la couleur apparaisse</p>
         <img src="/Ressources/Images/fleche-page.png " alt="fleche indiquant qu'il faut tourner la page"></div>
         <div class="page left"><p>Le bucheron & la fée nature</p></div>
         <div class="page right"><img src="/Ressources/Images/bucheron et la fee.png" alt="Une bucheron et une fée dans une forêt"></div>
@@ -78,47 +76,47 @@
         <div class="page right"><img src="/Ressources/Images/fille-sur-taureau-bleu.png" alt="Une fille sur un taureau bleu"></div>
         <div class="page left"><p>Le taureau bleu (Suite)</p></div>
         <div class="page right"><img src="/Ressources/Images/fille-sur-taureau.png" alt="Une fille sur un taureau bleu"></div>
-        <div class="page left"><p>L'archange Saint-Michel, le lutin, 
-          le diablotin & le dragon Prosper</p></div>
+        <div class="page left"><p>L'archange <span>S</span>aint-<span>M</span>ichel, le lutin, 
+          le diablotin & le dragon <span>P</span>rosper</p></div>
         <div class="page right"><img src="/Ressources/Images/saintmich_badass.png" alt="Le mont Saint michel et un ange"></div>
-        <div class="page left"><p>L'archange Saint-Michel, le lutin, 
-          le diablotin & le dragon Prosper (Suite)</p></div>
+        <div class="page left"><p>L'archange <span>S</span>aint-<span>M</span>ichel, le lutin, 
+          le diablotin & le dragon <span>P</span>rosper (Suite)</p></div>
         <div class="page right"><img src="/Ressources/Images/dragon--garcon-saintmichel-redim.png" alt="Le mont saint michel et un garcon"></div>
-        <div class="page left"><p>Trotte-Menue & son fiancé Soupir</p></div>
+        <div class="page left"><p>Trotte-Menue & son fiancé <span>S</span>oupir</p></div>
         <div class="page right"><img src="/Ressources/Images/souris-danse.png" alt="Une souris danse"></div>
-        <div class="page left"><p>Trotte-Menue & son fiancé Soupir (Suite)</p></div>
+        <div class="page left"><p>Trotte-Menue & son fiancé <span>S</span>oupir (Suite)</p></div>
         <div class="page right"><img src="/Ressources/Images/souris-princesse.png" alt="Une sourie en princesse"></div>
-        <div class="page left"><p>Oeil de Lune & Perce-Neige</p></div>
+        <div class="page left"><p>Oeil de <span>L</span>une & <span>P</span>erce-<span>N</span>eige</p></div>
         <div class="page right"><img src="/Ressources/Images/sioux-lumiere.png" alt="deux petits sioux"></div>
-        <div class="page left"><p>Oeil de Lune & Perce-Neige (Suite)</p></div>
+        <div class="page left"><p>Oeil de <span>L</span>une & <span>P</span>erce-<span>N</span>eige (Suite)</p></div>
         <div class="page right"><img src="/Ressources/Images/sioux-lumiere2.png" alt="deux petits sioux"></div>
-        <div class="page left"><p>Le talisman de Merlin</p></div>
+        <div class="page left"><p>Le talisman de <span>M</span>erlin</p></div>
         <div class="page right"><img src="/Ressources/Images/femme-petit-chien-grotte.png" alt="une femme et un chien dans une grotte"></div>
-        <div class="page left"><p>Le talisman de Merlin (Suite)</p></div>
+        <div class="page left"><p>Le talisman de <span>M</span>erlin (Suite)</p></div>
         <div class="page right"><img src="/Ressources/Images/femme-petit-chien-grotte2.png" alt="une femme et un chien dans une grotte""></div> 
-        <div class="page left"><p>Le talisman de Merlin (Suite)</p></div>
+        <div class="page left"><p>Le talisman de <span>M</span>erlin (Suite)</p></div>
         <div class="page right"><img src="/Ressources/Images/trois-dragons-mignons.png" alt="trois dragons mignons"></div> 
         <div class="page left"><p>Mr le chasseur et les licornes</div>
         <div class="page right"><img src="/Ressources/Images/chasseur licorne.png" alt="Un chasseur et une licorne dans une forêt"></div> 
-        <div class="page left"><p>Anne de Bretagne et petit-Louis</p></div>
+        <div class="page left"><p>Anne de <span>B</span>retagne et petit-<span>L</span>ouis</p></div>
         <div class="page right"><img src="/Ressources/Images/reine-sabot.png" alt="Une reine avc des sabots"></div>
-        <div class="page left"><p>Bibi Coco & Chanee</p></div>
+        <div class="page left"><p>Bibi <span>C</span>oco & <span>C</span>hanee</p></div>
         <div class="page right"><img src="/Ressources/Images/garconandelephant.png" alt="une elephant et un singe"></div>
-        <div class="page left"><p>Bibi Coco & Chanee</p></div>
+        <div class="page left"><p>Bibi <span>C</span>oco & <span>C</span>hanee</p></div>
         <div class="page right"><img src="/Ressources/Images/gibbon_enchained.png" alt="une elephant et un singe"></div>
         <div class="page left"><p>Les miettes de pain magiques</p></div>
         <div class="page right"><img src="/Ressources/Images/fille-sur-oiseaux.png" alt="petite fille sur oiseaux bleu"></div>
         <div class="page left"><p>Les pious-pious</p></div>
         <div class="page right"><img src="/Ressources/Images/oiseaux-amoureux.png" alt="deux oiseaux mignons amoureux"></div> 
         <div class="page left"><p>Milou et l'arbre coupé du théatre</p></div>
-        <div class="page right"><img src="/Ressources/Images/" alt="deux oiseaux mignons amoureux"></div>
-        <div class="page left"><p><span>Fin...</span><br><br>Pour aller plus loin cliquez juste en dessous pour découvrir mon livre</p>
+        <div class="page right"><img src="/Ressources/Images/milouarbre.png" alt="un chien aux pates blaches dans une foret"></div>
+        <div class="page left"><p>F<span>in...</span><br><br>Pour aller plus loin cliquez juste en dessous pour découvrir mon livre</p>
           <div class="container-button" id="book-button">
-            <div onclick="smoothScroll2()">
-              <div class="circle bounce" data-target="#introText2">
+            <div class="arrow-holder arrow-bis" onclick="smoothScroll2()">
+              <div class="circle bounce">
                   <i class="fa fa-angle-double-down fa-4x drop-arrow" id="faa"></i>
               </div>
-            </div>   
+            </div>
           </div>
         </div>        
       </div>
@@ -126,30 +124,43 @@
   </section>
 
 
-  <!-- //*************************        Section4 Formulaire     **********************// -->
+  <!-- //*************************        Section4 PresBook     **********************// -->
 
   <section id="section3">
-    <img src="/Ressources/Images/dieuver3234.png" alt="livre en 3D">
+    <div class="description">
+      <div class="description-text">
+        <p class="description-p"><span>M</span>on livre ''DIEU''' VER 3234<br><br>
+          Ce recueil est un condensé des contes inventés, ''remixés'' racontés dans toutes les écoles privées et publiques de ma ville adoptive FOUGERES ! <br>
+          A l'origine je suis secrétaire de direction & réflexologue-plantaire licenciée en Naturopathie rénovée. J'écris depuis mes 9-12 ans des histoires, des contes, des nouvelles, des recueils ! <br>
+          TIMOTEE au théâtre VICTOR HUGO d'un samedi soir m'a donné l'idée ainsi que les enfants de l'école ODILE GAUTRY de rassembler mes et nos contes dans un livre illustré. <br>
+          Jamais je n'oublierai ces enfants fougerais qui m'aident à vaincre ma grande fatigabilité incurable à la suite d'une maladie neurologique... <br>
+          A travers ce recueil, je remercie mon amie NELLY BRETON, ma remplaçante hors pair.
+        </p> 
+      </div>
+      <div class="description-image">      
+      </div>
+    </div>  
   </section>
 
 
   <!-- //*************************        Section4 Formulaire     **********************// -->
 
   <section id="section4">
-    <form>
-      <div class="form-container">
+    <div class="form-container">
+      <form>      
         <h4>Me contacter</h4>
+        <input type="text" id="firstname" placeholder="Votre prénom" required><br>
           <input type="text" id="name" placeholder="Votre nom" required><br>
-          <input type="email" id="mail" placeholder="Votre email" required><br>
+          <input type="email" id="email" placeholder="Votre email" required><br>
           <input type="number" id="number" placeholder="Votre numero (facultatif)"><br>
           <textarea name="message" id="message" cols="20" rows="8" placeholder="Votre message"></textarea>
-          <button id="send-button">Envoyer</button>
+      </form>      
+      <button id="send-button" onclick="sendMail()">Envoyer</button>
       <div class="contact">
           <a href="mailto:annickroux513@gmail.com">✉️ annickroux513@gmail.com</a>
           <a href="tel:+33">📞 0299335544</a>
       </div>
-      </div>
-    </form>
+    </div>    
   </section>
 
 
