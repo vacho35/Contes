@@ -2,7 +2,7 @@
   --width-page: 40vw;
   --height-page: 35vw;
   --border-color: #03e9f4;
-  --button-color: #ef6013;
+  --button-color: #ef6013db;
 }
 *,
 * :before,
@@ -11,11 +11,12 @@
 }
 html,
 body {
-  font-family: "Scope One", sans-serif;
+  font-family: 'Scope One', serif;
   background: linear-gradient(#141e30, #243b55);
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   margin: 0;
   padding: 0;
+  color: #d2d2d2;
 }
 html {
   height: 100%;
@@ -23,13 +24,9 @@ html {
   --res: calc(0.01 * 10vmin);
   font-size: 100%;
 }
-body {
-  background-color: #00000026;
-  color: #f0f0f0;
-}
 a {
   text-decoration: none;
-  color: #8a91f6;
+  color: #c247a3;
 }
 p{
   font-weight:300;
@@ -201,7 +198,7 @@ h1 {
   position: relative;
   display: inline-block;
   padding: 15px 25px;
-  color: #ffffff;
+  color: #d2d2d2;
   font-size: 22px;
   text-decoration: none;
   text-transform: uppercase;
@@ -216,7 +213,7 @@ h1 {
 .launcher a:hover {
   background: var(--button-color);
   border: 1px solid #03e9f4;
-  color: #fff;
+  color: #d2d2d2;
   border-radius: 6px;
   box-shadow: 0 0 5px #03e9f4,
               0 0 25px #03e9f4,
@@ -322,17 +319,17 @@ h1 {
   text-align: center;
   padding: 17px 0 0 0;
   line-height: 50px;
-  color: #f0f0f0;
+  color: #262424;
 }
 .container-button:hover .circle{
   background: var(--button-color);
-  color: #fff;
+  color: #d2d2d2;
   border-radius: 100%px;
   box-shadow: 0 0 5px #03e9f4,
               0 0 25px #03e9f4,
               0 0 50px #03e9f4,
               0 0 100px #03e9f4;
-              transition: 0.7s ease-in-out;
+              transition: 0.5s ease-in-out;
 }
 #faa {
   font-size: 2em;
@@ -436,7 +433,7 @@ h1 {
 #section2 {
   height: 100vh;
   width: 100%;
-  background: url("/Ressources/Images/paysagedessin.png") no-repeat center / cover;
+  background: url("/Ressources/Images/paysagedessin2.png") no-repeat center / cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -493,7 +490,7 @@ p span {
   transform-style: preserve-3d;
   cursor: pointer;
   user-select: none;
-  background-color: #f0f0f0;
+  background-color: #d2d2d2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -601,7 +598,7 @@ p span {
   width: 100%;
   padding: 1.6em;
 }
-.right:nth-child(1) img {  /***********  fleche livre *********/
+.right:nth-child(1) img {  
   position: absolute;
   right: 0;
   width: 120px;
@@ -650,31 +647,33 @@ p span {
   height: 100%;
   box-sizing: border-box;
   padding: 10px;
+  width: 1vw;
+  max-width: 1vw;
+  height: var(--height-page);
 }
-
 .edge-left {
-  right: 79.9vw;
-    width: 1vw;
-    max-width: 1vw;
-    height: var(--height-page);
-    transform-origin: 100% 50%;
-    border-radius: 5px 0 0 5px;
+  right: 79.9vw;    
+  transform-origin: 100% 50%;
+  border-radius: 5px 0 0 5px;
 }
-
 .edge-right {
   left: 79.9vw;
-  width: 1vw;
-  height: var(--height-page);
-  max-width: 1vw;
   transform-origin: 0 50%;
   border-radius: 0 5px 5px 0;
 }
-.page-left-fixed {
-  margin: 0;
-  position: absolute;
-  top: 0;
+.page-fixed{
   width: var(--width-page);
   height: var(--height-page);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  margin: 0;
+  position: absolute;
+  top: 0;  
+  overflow: hidden;
+}
+.page-left-fixed {  
   background: linear-gradient(
     to right,
     #fffcef 0%,
@@ -685,31 +684,14 @@ p span {
   border-top-left-radius: 10px 3px;
   border-bottom-left-radius: 10px 3px;
   border-top-right-radius: 1000px 20px;
-  border-bottom-right-radius: 1000px 20px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
+  border-bottom-right-radius: 1000px 20px;  
 }
 .page-right-fixed {
-  margin: 0;
-  position: absolute;
-  top: 0;
-  width: var(--width-page);
-  height: var(--height-page);
   right: 0;
   border-top-right-radius: 10px 3px;
   border-bottom-right-radius: 10px 3px;
   border-top-left-radius: 1000px 20px;
   border-bottom-left-radius: 1000px 20px;
-  background: linear-gradient(
-    to right,
-    #fffcef 0%,
-    #fffcef 95%,
-    #9e9d8b 98%,
-    #383826 100%
-  );
   border-right: solid 1px #383826;
   background: linear-gradient(
     to left,
@@ -718,12 +700,6 @@ p span {
     #9e9d8b 98%,
     #383826 100%
   );
-  border-left: solid 1px #383826;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
   z-index: -10;
 }
 #book-button {
@@ -773,7 +749,7 @@ p span {
 .description-p{
   width: 70%;
   font-size: calc(1px + 0.8vw);  
-  color: #efeaea;
+  color: #d2d2d2;
 }
 .description-p::first-line{
   font-size: 2em;
@@ -782,7 +758,7 @@ p span {
 .description-image{
   width: 100%;
   height: auto;
-  background: url(/Ressources/Images/backgroundPresBook\ \(2\).png) no-repeat center / cover;
+  background: url(/Ressources/Images/backgroundPresBook.png) no-repeat center / cover;
 }
 
 
@@ -819,27 +795,23 @@ h4{
   padding: 0;
   margin: 20px;
 }
-input{
+.input-text{
   font-weight: bolder;
   border-radius: 10px;
   width: 340px;
-  height: 40px;
-  padding: 10px;
-  outline: none;
+  utline: none;
   border: none;
+  padding: 10px;
+}
+input{  
+  height: 40px;  
 }
 textarea{
-  width: 340px;
-  border-radius: 10px;
-  padding: 10px;
-  margin-bottom: 20px;
-  outline: none;
-  border: none;
-  font-weight: bolder;
+  margin-bottom: 20px;  
 }
 #send-button{
   background-color: var(--button-color);
-  color: #f0f0f0;
+  color: #d2d2d2;
   width: 150px;
   padding: 10px 0;
   border-radius: 5px;
@@ -848,15 +820,12 @@ textarea{
   cursor: pointer;  
 }
 #send-button:hover{
-  background-color: var(--button-color);
-  border: 1px solid #03e9f4;
-  color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 5px #03e9f4,
               0 0 25px #03e9f4,
               0 0 50px #03e9f4,
               0 0 100px #03e9f4;
-              transition: 0.7s ease-in-out;
+              transition: 0.6s ease-in-out;
 }
 .contact{
   width: 100%;
@@ -868,7 +837,7 @@ textarea{
 }
 .contact a{
   display: flex;
-  color: #ffffff;
+  color: #d2d2d2;
   padding: 10px;
   font-weight: 500;
 }
@@ -897,7 +866,7 @@ footer p {
   font-size: 0.7em;
   line-height: 1.3em;
   letter-spacing: 1.5px;
-  color: #f0f0f0;
+  color: #d2d2d2;
 }
 .copyright {
   margin: 20px;

@@ -6,24 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lovers+Quarrel&family=Raleway:ital,wght@0,400;1,300;1,400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Scope+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lovers+Quarrel&family=Scope+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("oLLbv9-z-xYDdIXNM");
-      })();
-    </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("oLLbv9-z-xYDdIXNM");
+    })();
+  </script>
   <title>Nancy KelsaLL</title>
 </head>
 <body>
 
 
-  <!-- //************     Section1       ***********// -->
+  <!-- //************     Section1 Main    ***********// -->
 
   <section id="main-section">    
     <div class="background-container">
@@ -39,19 +38,17 @@
       </div>
       <div class="arriere-plan mont"></div>
       <div class="premier-plan mont"></div>   
-      <img class="lune" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt="lune">
+      <img class="lune" src="/Ressources/Images/moon2R.png" alt="lune">
       <div class="stars"></div>
       <div class="clouds"></div>
     </div>    
     <div class="container-video" id="container-video" >      
       <video src="/Ressources/Images/videoAccueil.mp4" class="video" id="video" autoplay type="video/mp4" ></video>
-    </div>
+    </div> 
     
-
-      <!-- //*********    Button fleché  *********  // -->
-
-    <div class="container-button">
-      <div class="arrow-holder" id="arrow-holder" onclick="smoothScroll1()">
+    <!--//*********    Bouton fleché  *********  //  -->
+    <div class="container-button">    
+      <div class="arrow-holder" id="arrow-holder" onclick="smoothScroll1()">        
         <div id="arrow" class="circle bounce">
             <i class="fa fa-angle-double-down fa-4x drop-arrow" id="faa"></i>
         </div>
@@ -60,13 +57,13 @@
   </section>
 
 
-  <!-- //*********        section2     ********// -->
+  <!-- //*********        section2 Livre interactif      ********// -->
 
   <section id="section2">
     <div class="book">
       <div class="edge-left edge"></div>
       <div class="edge-right edge"></div>
-      <div class="page-left-fixed"><img src="/Ressources/Images/saintmichredim.png" alt=""></div>
+      <div class="page-left-fixed page-fixed"><img src="/Ressources/Images/saintmichredim.png" alt=""></div>
       <div id="pages" class="pages">
         <div class="page right"><p>Pour tourner la page veuillez cliquer dessus, et survolez les images pour que la couleur apparaisse</p>
         <img src="/Ressources/Images/fleche-page.png " alt="fleche indiquant qu'il faut tourner la page"></div>
@@ -120,11 +117,11 @@
           </div>
         </div>        
       </div>
-      <div class="page-right-fixed"><img src="/Ressources/Images/livre_bonzai.png" alt="couché des oleil sur mont Saint Michel"></div>
+      <div class="page-right-fixed page-fixed"><img src="/Ressources/Images/livre_bonzai.png" alt="couché des oleil sur mont Saint Michel"></div>
   </section>
 
 
-  <!-- //*************************        Section4 PresBook     **********************// -->
+  <!-- //*************************        Section4 Presentation Livre       **********************// -->
 
   <section id="section3">
     <div class="description">
@@ -143,17 +140,17 @@
   </section>
 
 
-  <!-- //*************************        Section4 Formulaire     **********************// -->
+  <!-- //*************************        Section4 Formulaire       **********************// -->
 
   <section id="section4">
     <div class="form-container">
       <form>      
         <h4>Me contacter</h4>
-        <input type="text" id="firstname" placeholder="Votre prénom" required><br>
-          <input type="text" id="name" placeholder="Votre nom" required><br>
-          <input type="email" id="email" placeholder="Votre email" required><br>
-          <input type="number" id="number" placeholder="Votre numero (facultatif)"><br>
-          <textarea name="message" id="message" cols="20" rows="8" placeholder="Votre message"></textarea>
+        <input class="input-text" type="text" id="firstname" placeholder="Votre prénom" required><br>
+        <input class="input-text" type="text" id="name" placeholder="Votre nom" required><br>
+        <input class="input-text" type="email" id="email" placeholder="Votre email" required><br>
+        <input class="input-text" type="number" id="number" placeholder="Votre numero (facultatif)"><br>
+        <textarea class="input-text" name="message" id="message" cols="20" rows="8" placeholder="Votre message"></textarea>
       </form>      
       <button id="send-button" onclick="sendMail()">Envoyer</button>
       <div class="contact">
@@ -164,10 +161,10 @@
   </section>
 
 
-  <!-- //*************************        Footer     **********************// -->
+  <!-- //*************************        Footer       **********************// -->
 
   <footer>
-    <img src="/Ressources/Images/IA.png" alt="image représantant une IA">
+    <img src="/Ressources/Images/IAR.png" alt="image représantant une IA">
     <div class="copyright">
       <p>© Copyright <a href="http://">Nancy KELSALL</a> Tout droits reservés</p>
       <p>Site créé par <a href="mailto:quetinpoker1006@gmail.com">Borderline</a> avec l'aide des intelligences artificielles "Chat GPT, Midjourney, D-ID"</p>   
