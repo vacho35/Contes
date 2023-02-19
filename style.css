@@ -445,7 +445,7 @@ h1 {
   font-size: calc(3px + 1.2vw);
   color: #000000;
   padding: calc(4px + 4vw);
-  line-height: 1.3em;
+  line-height: 1.5em;
   letter-spacing: 1.5px;
 }
 .page p:first-letter {
@@ -724,9 +724,10 @@ p span {
   background: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100') no-repeat center / cover;
 }
 .description{
-  width: 70%;
+  width: 80%;
   height: 70%;
   display: flex;
+  align-items: center;
   backdrop-filter: blur(10px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     background-color: rgba(17, 25, 40, 0.75);
@@ -736,26 +737,32 @@ p span {
 }
 .description-text{
   width: 100%;
+  height: 75%;
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
   align-items: center;
   text-align: justify;
-  line-height: 1.4em;
 }
 .description-p{
-  width: 70%;
-  font-size: calc(1px + 0.9vw);  
+  width: 86%;
+  font-size: calc(2px + 0.7vw);  
   color: #d2d2d2;  
 }
-.description-title{
+.description h2{
   text-align: center;
-  font-size: calc(1px + 1.8vw);  
+  font-size: calc(1px + 1.8vw);
+  line-height: 1.5em;
+}
+.description h2:first-letter {
+  font-family: Lovers Quarrel, cursive;
+  font-size: 3em;
+  font-weight: 400;
 }
 .description-image{
   width: 100%;
-  height: auto;
+  height: calc(70px + 61vh);
   background: url(/Ressources/Images/backgroundPresBook.png) no-repeat center / cover;
 }
 
@@ -776,6 +783,7 @@ p span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
   backdrop-filter: blur(8px) saturate(200%);
   -webkit-backdrop-filter: blur(13px) saturate(156%);
   background-color: rgba(17, 25, 40, 0.43);
@@ -788,7 +796,7 @@ form{
   align-items: center;
   justify-content: center;
 }
-h4{
+h2{
   font-size: 3em;
   padding: 0;
   margin: 20px;
@@ -829,9 +837,11 @@ textarea{
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content:space-evenly;
-  margin: 20px;
+  justify-content: space-between;
+  margin: 10px;
   padding: 0;
+  /* font-size: calc(1px + 0.7vw); */
+  letter-spacing: 0.5px;
 }
 .contact a{
   display: flex;
@@ -874,14 +884,6 @@ footer p {
 /*************************      Media querys     *********************/
 
 @media screen and (max-width: 1200px) {
-  p {
-    margin: 0;
-    padding: 1.5em;
-    text-align: center;
-    font-size: calc(8px + 2.3vw);
-    line-height: calc(15px + 2vw);
-    letter-spacing: 1.5px;
-  }
   .right:nth-child(1) img {
     width: calc(45px + 4vw);
   }
@@ -890,7 +892,35 @@ footer p {
 @media screen and (max-width: 950px) {
   #section2 {
     height: auto;
-    padding: 10% 0;
+    min-height: 80vh;
+  }
+  #section3 {
+    height: auto;
+    min-height: 50vh;
+  }
+  .description-text{
+    width: 100%;
+    height: 35vh;
+    line-height: inherit;
+  }
+  .description{
+    flex-direction: column;
+    margin: 40px 0;
+}
+.description-p{
+  font-size: calc(4px + 0.8vw);
+  padding: 1.5em 0;
+  margin: 0;
+}
+.description h2{
+  font-size: calc(4px + 1.8vw);
+}
+}
+@media screen and (max-width: 650px) {
+  #section2 {
+    min-height: 60vh;
+  }
+  .description-image{
+    height: 40vh;
   }
 }
-
