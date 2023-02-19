@@ -56,18 +56,16 @@ p{
   width: 100%;
 }
 h1 {
-  text-align: center;
-  font-size: calc(130 * var(--res));
-  margin-top: 10px;
+  text-align: center;  
   color: #d2d2d2;
-  letter-spacing: 0.05em;
   font-weight: 300;
   z-index: 10;
   font-family: "Lovers Quarrel", sans-serif;
 }
 .typedtext {
   visibility: hidden;
-  margin: 6% 0;
+  margin-top: calc(60px + 3vh);
+  font-size: calc(50px + 3vw); 
   position: absolute;
   left: 50%;
   transform: translate(-50%,-50%);
@@ -197,9 +195,9 @@ h1 {
   vertical-align: middle;
   position: relative;
   display: inline-block;
-  padding: 15px 25px;
+  padding: 15px 20px;
   color: #d2d2d2;
-  font-size: 22px;
+  font-size: calc(6px + 1vw);
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
@@ -305,7 +303,6 @@ h1 {
 /* ****************************     Arrow Button         ************************** */
 
 .container-button {
-  margin-top: 2em;
   z-index: 10;
   position: absolute;
   left: 50%;
@@ -314,11 +311,11 @@ h1 {
 }
 .circle {
   background: var(--button-color);
-  width: 60px;
+  width: calc(6px + 3vw);
   border-radius: 100%;
   text-align: center;
-  padding: 17px 0 0 0;
-  line-height: 50px;
+  padding: calc(1px + 1vw) 0 0 0;
+  line-height: calc(10px + 2vw);
   color: #262424;
 }
 .container-button:hover .circle{
@@ -332,7 +329,7 @@ h1 {
               transition: 0.5s ease-in-out;
 }
 #faa {
-  font-size: 2em;
+  font-size: calc(4px + 2vw);
 }
 .arrow-holder {
   position: relative;
@@ -345,10 +342,10 @@ h1 {
 }
 .arrow-holder::before {
   content: "";
-  width: 60px;
+  width: calc(3px + 4vw);
   height: 9px;
   position: absolute;
-  top: 127px;
+  top: calc(74% + 1vw);
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -443,11 +440,11 @@ h1 {
   perspective: 250vw;
 }
 .page p {
-  margin-bottom: 150px;
+  margin-bottom: 10%;
   text-align: center;
-  font-size: 2em;
+  font-size: calc(3px + 1.2vw);
   color: #000000;
-  padding: 41px;
+  padding: calc(4px + 4vw);
   line-height: 1.3em;
   letter-spacing: 1.5px;
 }
@@ -601,8 +598,8 @@ p span {
 .right:nth-child(1) img {  
   position: absolute;
   right: 0;
-  width: 120px;
-  top: 45%;
+  width: calc(30px + 4vw);
+  top: 65%;
   transform: rotateZ(180deg);
   transform: rotateX(180deg);
 }
@@ -712,7 +709,7 @@ p span {
   visibility: visible;
 }
 .arrow-bis::before{
-  top: 85px;
+  top: calc(106% + 1vw);
 }
 
 /*************************      Section3 Presentation du livre  *********************/
@@ -740,6 +737,7 @@ p span {
 .description-text{
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-content: center;
   justify-content: center;
   align-items: center;
@@ -748,12 +746,12 @@ p span {
 }
 .description-p{
   width: 70%;
-  font-size: calc(1px + 0.8vw);  
-  color: #d2d2d2;
+  font-size: calc(1px + 0.9vw);  
+  color: #d2d2d2;  
 }
-.description-p::first-line{
-  font-size: 2em;
+.description-title{
   text-align: center;
+  font-size: calc(1px + 1.8vw);  
 }
 .description-image{
   width: 100%;
@@ -895,3 +893,4 @@ footer p {
     padding: 10% 0;
   }
 }
+
