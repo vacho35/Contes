@@ -67,13 +67,13 @@ document.addEventListener('DOMContentLoaded', function(){
 // ***************************    Timeout    ***************************  //
 
 
-const playButton = document.getElementById("play-pause");
-playButton.addEventListener('click', () => {
-    playButton.classList.add("launcher-hidden");
+const launcher = document.getElementById("launcher-button");
+launcher.addEventListener('click', () => {
+    launcher.classList.add("launcher-hidden");
   setTimeout(() => {
     document.getElementById("container-video").classList.add("container-video-visible");
     document.querySelector('video').play();
-    playButton.classList.add("launcher-hidden");
+    launcher.classList.add("launcher-hidden");
    }, 2000);
   setTimeout(() => {    
     document.getElementById('typedtext').classList.add('h1-visible');
@@ -81,8 +81,70 @@ playButton.addEventListener('click', () => {
    }, 4500);
    setTimeout(() => {    
     document.getElementById('arrow-holder').classList.add('arrow-holder-visible');
-   }, 1000);   
+   }, 100000);   
 })
+
+
+// ***************************    Vidéo controls    ***************************  //
+const video = document.querySelector('.video');
+const btnPausePlay = document.getElementById('play-pause');
+const img = document.querySelector('#play-pause img')
+const barreOrange = document.querySelector('.barre-orange');
+const juice = document.querySelector('.juice');
+const muteBtn = document.getElementById('mute');
+const volumeSlider = document.getElementById('volume-slider');
+
+btnPausePlay.addEventListener('click', togglePlayPause);
+video.addEventListener('click', togglePlayPause);
+
+function togglePlayPause(){
+  if(video.paused){
+    img.src = "ressources/pause.png";
+    video.play();
+  }
+  else {
+    img.src = "ressources/play.png";
+    video.pause();
+  }
+} 
+
+// la barre orange
+
+video.addEventListener('timeupdate', () => {
+
+    let juicePos = video.currentTime / video.duration;
+
+    juice.style.width = juicePos * 100 + "%";
+
+    if(video.ended){
+      img.src = "ressources/play.png";
+    }
+})
+// volume
+
+volumeSlider.addEventListener('change', () => {
+
+    video.volume = volumeSlider.value / 100;
+    console.log(video.volume);
+
+})
+
+
+//mute
+
+muteBtn.addEventListener('click', () => {
+
+    if(video.muted){
+      video.muted = false;
+      muteBtn.innerText = "Mute";
+    }
+    else {
+      video.muted = true;
+      muteBtn.innerText = "Unmute";
+    }
+    }
+
+ )
 
 
 // ***************************    Scroll Bouton    ***************************  //
