@@ -11,7 +11,7 @@ function sendMail() {
     message: document.getElementById("message").value,
   };
 
-  const serviceID = "service_lbf7e5p";
+  const serviceID = "service_td9dw11";
   const templateID = "template_d5a240a";
 
     emailjs.send(serviceID, templateID, params)
@@ -143,8 +143,25 @@ muteBtn.addEventListener('click', () => {
       muteBtn.innerText = "Unmute";
     }
     }
-
  )
+
+ //click barre orange
+
+ let rect = barreOrange.getBoundingClientRect();
+ let largeur = rect.width;
+
+ barreOrange.addEventListener('click', (e) => {
+
+    let x = e.clientX - rect.left;
+    
+    let widthPercent = ((x*100/largeur));
+    console.log(x);
+
+    let durationVideo = video.duration;
+
+    // position en seconde par rapport au pourcentage
+    video.currentTime = durationVideo * (widthPercent / 100);
+ })
 
 
 // ***************************    Scroll Bouton    ***************************  //
