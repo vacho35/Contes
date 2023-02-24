@@ -761,12 +761,13 @@ p span {
 }
 .description-p {
   width: 86%;
-  font-size: calc(2px + 0.8vw);
-  line-height: 21px;
+    font-size: calc(1px + 0.8vw);
+    line-height: 18px;
 }
 .description h2 {
   text-align: center;
   font-size: calc(1px + 1.8vw);
+  line-height: 36px;
 }
 .description h2:first-letter {
   font-family: Lovers Quarrel, cursive;
