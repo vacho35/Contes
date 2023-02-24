@@ -183,7 +183,7 @@ h1 {
 }
 .juice {
   height: 5px;
-  background: orangered;
+  background: rgb(248, 93, 37);
 }
 #volume-slider {
   position: relative;
