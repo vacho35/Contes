@@ -99,11 +99,11 @@ video.addEventListener('click', togglePlayPause);
 
 function togglePlayPause(){
   if(video.paused){
-    img.src = "ressources/pause.png";
+    img.src = "Ressources/pause.png";
     video.play();
   }
   else {
-    img.src = "ressources/play.png";
+    img.src = "Ressources/play.png";
     video.pause();
   }
 } 
@@ -117,7 +117,7 @@ video.addEventListener('timeupdate', () => {
     juice.style.width = juicePos * 100 + "%";
 
     if(video.ended){
-      img.src = "ressources/play.png";
+      img.src = "Ressources/play.png";
     }
 })
 // volume
