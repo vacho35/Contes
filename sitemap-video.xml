@@ -1,0 +1,12 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="https://www.google.com/schemas/sitemap-video/1.1">
+<url>
+  <loc>https://www.nancy-kelsall.fr</loc>
+  <video:video>
+    <video:content_loc>https://www.nancy-kelsall.fr/Ressources/Images/videoAccueil.mp4</video:content_loc>
+    <video:title>Nancy Kelsall</video:title>
+    <video:thumbnail_loc>https://www.nancy-kelsall.fr/Ressources/Images/videoMinia.png</video:thumbnail_loc>
+    <video:description>Présentation de Nancy Kelsall conteuse pour enfant</video:description>
+  </video:video>
+</url>
+</urlset>
